@@ -1,15 +1,15 @@
-<!DOCTYPE html>
+<?php
+    // 設定関連を読み込む
+    include_once('../config.php');
+    // 便利な関数を読み込む
+    include_once('../util.php');
+     
+    ?>
+    <!DOCTYPE html>
     <html lang="ja">
      
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="../Views/img/logo-twitterblue.svg">
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        <link rel="stylesheet" href="../Views/css/style.css">
-     
+        <?php include_once('../Views/common/head.php'); ?>
         <title>会員登録画面 / Twitterクローン</title>
         <meta name="description" content="会員登録画面です">
     </head>
@@ -17,7 +17,7 @@
     <body class="signup text-center">
         <main class="form-signup">
             <form action="sign-up.php" method="post">
-                <img src="../Views/img/logo-white.svg" alt="" class="logo-white">
+                <img src="<?php echo HOME_URL; ?>Views/img/logo-white.svg" alt="" class="logo-white">
                 <h1>アカウントを作る</h1>
                 <input type="text" class="form-control" name="nickname" placeholder="ニックネーム" maxlength="50" required autofocus>
                 <input type="text" class="form-control" name="name" placeholder="ユーザー名、例)techis132" maxlength="50" required>
@@ -28,6 +28,7 @@
                 <p class="mt-2 mb-3 text-muted">&copy; 2021</p>
             </form>
         </main>
+        <?php include_once('../Views/common/foot.php'); ?>
     </body>
      
     </html>
