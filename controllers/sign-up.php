@@ -4,11 +4,11 @@
     ///////////////////////////////////////
      
     // 設定を読み込み
-    include_once '../config.php';
+    include_once 'config.php';
     // 便利な関数を読み込む
-    include_once '../util.php';
+    include_once 'util.php';
     // ユーザーデータ操作モデルを読み込み
-    include_once '../Models/users.php';
+    include_once 'Models/users.php';
      
     // 登録項目がすべて入力されていれば
     if (isset($_POST['nickname']) && isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])) {
@@ -27,4 +27,4 @@
     }
      
     // 画面表示
-    include_once '../Views/sign-up.php';
+    include_once 'Views/sign-up.php';

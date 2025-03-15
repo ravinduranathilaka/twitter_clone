@@ -136,7 +136,7 @@
         $image_name = $user['id'] . '_' . date('YmdHis') . $image_extension;
      
         // 保存先のディレクトリ
-        $directory = '../Views/img_uploaded/' . $type . '/';
+        $directory = 'Views/img_uploaded/' . $type . '/';
      
         // 画像のパス
         $image_path = $directory . $image_name;

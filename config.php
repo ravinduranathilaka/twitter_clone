@@ -10,3 +10,4 @@
     define('DB_USER', 'root');
     define('DB_PASSWORD', '');
     define('DB_NAME', 'twitter_clone');
+    define('HOME_URL', 'http://localhost/twitterClone/');

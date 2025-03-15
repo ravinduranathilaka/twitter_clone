@@ -1,15 +1,15 @@
 <?php
     // 設定関連を読み込む
-    include_once('../config.php');
+    include_once('config.php');
     // 便利な関数を読み込む
-    include_once('../util.php');
+    include_once('util.php');
      
     ?>
     <!DOCTYPE html>
     <html lang="ja">
      
     <head>
-        <?php include_once('../Views/common/head.php'); ?>
+        <?php include_once('Views/common/head.php'); ?>
         <title>会員登録画面 / Twitterクローン</title>
         <meta name="description" content="会員登録画面です">
     </head>
@@ -17,7 +17,7 @@
     <body class="signup text-center">
         <main class="form-signup">
             <form action="sign-up.php" method="post">
-                <img src="<?php echo HOME_URL; ?>Views/img/logo-white.svg" alt="" class="logo-white">
+                <img src="./img/logo-white.svg" alt="" class="logo-white">
                 <h1>アカウントを作る</h1>
                 <input type="text" class="form-control" name="nickname" placeholder="ニックネーム" maxlength="50" required autofocus>
                 <input type="text" class="form-control" name="name" placeholder="ユーザー名、例)techis132" maxlength="50" required>
@@ -28,7 +28,7 @@
                 <p class="mt-2 mb-3 text-muted">&copy; 2021</p>
             </form>
         </main>
-        <?php include_once('../Views/common/foot.php'); ?>
+        <?php include_once('Views/common/foot.php'); ?>
     </body>
      
     </html>

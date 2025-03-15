@@ -1,8 +1,8 @@
 <?php
     // 設定関連を読み込む
-    include_once('../config.php');
+    include_once('config.php');
     // 便利な関数を読み込む
-    include_once('../util.php');
+    include_once('util.php');
      
     ///////////////////////////////////////
     // ツイート一覧
@@ -25,14 +25,14 @@
     <html lang="ja">
      
     <head>
-        <?php include_once('../Views/common/head.php'); ?>
+        <?php include_once('Views/common/head.php'); ?>
         <title>プロフィール画面 / Twitterクローン</title>
         <meta name="description" content="プロフィール画面です">
     </head>
      
     <body class="home profile text-center">
         <div class="container">
-            <?php include_once('../Views/common/side.php'); ?>
+            <?php include_once('Views/common/side.php'); ?>
             <div class="main">
                 <div class="main-header">
                     <h1>太郎</h1>
@@ -41,7 +41,7 @@
                 <!-- プロフィールエリア -->
                 <div class="profile-area">
                     <div class="top">
-                        <div class="user"><img src="<?php echo HOME_URL; ?>Views/img_uploaded/user/sample-person.jpg" alt=""></div>
+                        <div class="user"><img src="./img_uploaded/user/sample-person.jpg" alt=""></div>
      
                         <?php if (isset($_GET['user_id'])) : ?>
                             <!-- 相手のページ -->
@@ -65,7 +65,7 @@
                                         </div>
                                         <div class="modal-body">
                                             <div class="user">
-                                                <img src="<?php echo HOME_URL; ?>Views/img_uploaded/user/sample-person.jpg" alt="">
+                                                <img src="./img_uploaded/user/sample-person.jpg" alt="">
                                             </div>
                                             <div class="mb-3">
                                                 <label for="" class="mb-1">プロフィール写真</label>
@@ -109,13 +109,13 @@
                 <?php else : ?>
                     <div class="tweet-list">
                         <?php foreach ($view_tweets as $view_tweet) : ?>
-                            <?php include('../Views/common/tweet.php'); ?>
+                            <?php include('Views/common/tweet.php'); ?>
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
             </div>
         </div>
-        <?php include_once('../Views/common/foot.php'); ?>
+        <?php include_once('Views/common/foot.php'); ?>
     </body>
      
     </html>

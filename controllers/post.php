@@ -4,12 +4,12 @@
     ///////////////////////////////////////
      
     // 設定を読み込み
-    include_once '../config.php';
+    include_once 'config.php';
     // 便利な関数を読み込み
-    include_once '../util.php';
+    include_once 'util.php';
      
     // ツイートデータ操作モデルを読み込む
-    include_once '../Models/tweets.php';
+    include_once 'Models/tweets.php';
      
     // ログインチェック
     $user = getUserSession();
@@ -44,4 +44,4 @@
     $view_user = $user;
      
     // 画面表示
-    include_once '../Views/post.php';
+    include_once 'Views/post.php';

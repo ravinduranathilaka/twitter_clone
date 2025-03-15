@@ -4,12 +4,12 @@
     ///////////////////////////////////////
      
     // 設定を読み込み
-    include_once '../config.php';
+    include_once 'config.php';
     // 便利な関数を読み込み
-    include_once '../util.php';
+    include_once 'util.php';
      
     // ユーザーデータ操作モデルを読み込み
-    include_once '../Models/users.php';
+    include_once 'Models/users.php';
      
     // ログイン結果
     $try_login_result = null;
@@ -22,7 +22,7 @@
         // ログインに成功した場合
         if ($user) {
             // ユーザー情報をセッションに保存
-     
+            saveUserSession($user);
      
             // ホーム画面へ遷移
             header('Location: ' . HOME_URL . 'Controllers/home.php');
@@ -37,4 +37,4 @@
     $view_try_login_result = $try_login_result;
      
     // 画面表示
-    include_once '../Views/sign-in.php';
+    include_once 'Views/sign-in.php';
